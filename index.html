@@ -1,99 +1,93 @@
 <!DOCTYPE html>
-<html lang="fr" class="no-js">
+<html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfoli Yu — UX/UI Designer</title>
-  <meta name="description" content="Portfoli Yu — Portfolio UX/UI Designer moderne et interactif." />
-
-  <link rel="stylesheet" href="/style.css" />
-  <script>
-    document.documentElement.classList.remove('no-js');
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfoli Yu — UX/UI & Brand Designer</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <!-- Header -->
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container">
-      <h1 class="logo">Portfoli <span class="accent">Yu</span></h1>
-      <nav class="nav">
-        <button id="menuBtn">☰</button>
+      <div class="logo">● Portfoli Yu</div>
+      <nav>
+        <button id="menuBtn" class="menu-btn">☰</button>
         <ul id="menu" class="menu">
           <li><a href="#hero">Accueil</a></li>
-          <li><a href="#projets">Projets</a></li>
-          <li><a href="#a-propos">À propos</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><button id="themeToggle" class="toggle-btn">🌙</button></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="hero" class="hero">
-    <div class="container">
-      <h2>Bienvenue sur <span class="accent">Portfoli Yu</span></h2>
-      <p>Un portfolio UX/UI dynamique, moderne et interactif.</p>
-      <a href="#projets" class="btn">Découvrir mes projets</a>
+  <!-- HERO -->
+  <section id="hero" class="hero container">
+    <div class="hero-text">
+      <h1>Hey, je suis <span class="highlight">Yu</span>,<br>
+      un <span class="accent">UX/UI & Brand Designer</span></h1>
+      <p>Transformer les idées en visuels percutants — UI/UX et branding qui captivent, engagent et livrent des résultats.</p>
+      <a href="#contact" class="btn">Contactez-moi</a>
+    </div>
+    <div class="hero-img">
+      <img src="https://via.placeholder.com/400x500" alt="Portrait Yu">
+    </div>
+    <div class="hero-stats">
+      <p><strong>15+</strong><br>Années d’expérience</p>
+      <p><strong>280+</strong><br>Projets livrés</p>
+      <p><strong>99%</strong><br>Satisfaction</p>
+      <p><strong>50</strong><br>Clients</p>
     </div>
   </section>
 
-  <!-- Projets -->
-  <section id="projets" class="section">
-    <div class="container">
-      <h2>Mes projets</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>✨ Projet 1</h3>
-          <p>Application mobile avec animations fluides et onboarding simplifié.</p>
-        </article>
-        <article class="card">
-          <h3>🚀 Projet 2</h3>
-          <p>Plateforme e-commerce avec design system et checkout rapide.</p>
-        </article>
-        <article class="card">
-          <h3>📊 Projet 3</h3>
-          <p>SaaS Analytics — refonte UI et amélioration du tableau de bord.</p>
-        </article>
+  <!-- SERVICES -->
+  <section id="services" class="section container">
+    <div class="services-grid">
+      <div class="service"><h3>User-Centered Design</h3><p>Des expériences sur mesure pour vos utilisateurs.</p></div>
+      <div class="service"><h3>Brand Identity & Strategy</h3><p>Construire une image de marque forte.</p></div>
+      <div class="service"><h3>Responsive & Modern UI</h3><p>Des designs fluides, optimisés pour tous supports.</p></div>
+      <div class="service"><h3>Seamless Prototyping</h3><p>Prototypage rapide et efficace pour valider vos idées.</p></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section container">
+    <h2>Crafting Meaningful Brands & Intuitive Experiences</h2>
+    <p>Je suis Yu, designer passionné par la création d’expériences digitales engageantes.  
+    J’allie stratégie, créativité et fonctionnalité pour donner vie à des idées et créer des produits extraordinaires.</p>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section container">
+    <h2>Portfolio</h2>
+    <div class="portfolio-item">
+      <img src="https://via.placeholder.com/800x500" alt="Projet 1">
+      <div class="caption">
+        <h3>Soundwave</h3>
+        <p>Design d’une expérience audio immersive (2025).</p>
       </div>
     </div>
   </section>
 
-  <!-- A propos -->
-  <section id="a-propos" class="section alt">
-    <div class="container">
-      <h2>À propos</h2>
-      <p>Je suis Mister Banana, designer passionné par l’expérience utilisateur.  
-      Portfoli Yu est une vitrine vivante : je crois que le design doit être dynamique, engageant et fun ! 🎉</p>
-    </div>
+  <!-- CONTACT -->
+  <section id="contact" class="section container">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Nom" required>
+      <input type="email" placeholder="Email" required>
+      <textarea rows="4" placeholder="Message"></textarea>
+      <button class="btn">Envoyer</button>
+    </form>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <form>
-        <label>Nom
-          <input type="text" name="name" required />
-        </label>
-        <label>Email
-          <input type="email" name="email" required />
-        </label>
-        <label>Message
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-        <button type="submit" class="btn">Envoyer</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="year"></span> Portfoli Yu. Créé avec ❤️ par Mister Banana.</small>
-    </div>
+    <p>© <span id="year"></span> Portfoli Yu. Tous droits réservés.</p>
   </footer>
 
-  <script src="/script.js" defer></script>
+  <script src="/script.js"></script>
 </body>
 </html>
