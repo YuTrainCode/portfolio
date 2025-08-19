@@ -1,3 +1,117 @@
+:root {
+  --bg: #f9f9f7;
+  --fg: #111;
+  --accent: #0070f3;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, system-ui, sans-serif;
+  scroll-behavior: smooth; /* ⚡ smooth scroll natif */
+}
+
+/* Intro anim */
+.intro-animation {
+  background: url('https://via.placeholder.com/800x800?text=Portfoli+Yu') center/cover no-repeat;
+  filter: grayscale(80%);
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  animation: fadeOut 10s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  60% { opacity: 0.2; }
+  100% { opacity: 0; }
+}
+
+/* Section d’accueil */
+.centered-content {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.headline {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
+.accent {
+  color: var(--accent);
+}
+
+.pitch {
+  max-width: 500px;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  transition: transform 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Section Qui suis-je */
+.about-section {
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  background: #fff;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.about-section p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* Quand elle est visible */
+.about-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+.site-footer {
+  position: relative;
+  padding: 2rem;
+  text-align: center;
+  background: var(--bg);
+}
+.site-footer .subtext {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+.site-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+
 /* Section Qui suis-je */
 .about-section, .cats-section {
   min-height: 70vh;
