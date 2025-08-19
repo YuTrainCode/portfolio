@@ -3,112 +3,97 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mister Banana — UX/UI Designer</title>
-  <meta name="description" content="Portfolio de Mister Banana, UX/UI Designer : études de cas, processus, et contact." />
+  <title>Portfoli Yu — UX/UI Designer</title>
+  <meta name="description" content="Portfoli Yu — Portfolio UX/UI Designer moderne et interactif." />
 
-  <!-- Lien CSS -->
-<link rel="stylesheet" href="./style.css">
-
+  <link rel="stylesheet" href="/style.css" />
   <script>
-    /* Retire no-js si JS activé */
     document.documentElement.classList.remove('no-js');
   </script>
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container">
-      <h1 class="logo">Mister Banana</h1>
+      <h1 class="logo">Portfoli <span class="accent">Yu</span></h1>
       <nav class="nav">
         <button id="menuBtn">☰</button>
         <ul id="menu" class="menu">
+          <li><a href="#hero">Accueil</a></li>
           <li><a href="#projets">Projets</a></li>
-          <li><a href="#process">Processus</a></li>
           <li><a href="#a-propos">À propos</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><button id="themeToggle" class="toggle-btn">🌙</button></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section id="hero" class="hero">
-      <div class="container">
-        <h2>Designer <span class="accent">UX/UI</span> créatif</h2>
-        <p>Je conçois des expériences simples, intuitives et centrées sur l’utilisateur.</p>
-        <a href="#projets" class="btn">Voir mes projets</a>
-      </div>
-    </section>
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <h2>Bienvenue sur <span class="accent">Portfoli Yu</span></h2>
+      <p>Un portfolio UX/UI dynamique, moderne et interactif.</p>
+      <a href="#projets" class="btn">Découvrir mes projets</a>
+    </div>
+  </section>
 
-    <!-- Projets -->
-    <section id="projets" class="section">
-      <div class="container">
-        <h2>Mes projets</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Projet 1</h3>
-            <p>Refonte d’une application bancaire avec focus sur l’onboarding.</p>
-          </article>
-          <article class="card">
-            <h3>Projet 2</h3>
-            <p>Optimisation du checkout e-commerce (+12% conversion).</p>
-          </article>
-          <article class="card">
-            <h3>Projet 3</h3>
-            <p>SaaS analytics : design system et meilleure rétention.</p>
-          </article>
-        </div>
+  <!-- Projets -->
+  <section id="projets" class="section">
+    <div class="container">
+      <h2>Mes projets</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>✨ Projet 1</h3>
+          <p>Application mobile avec animations fluides et onboarding simplifié.</p>
+        </article>
+        <article class="card">
+          <h3>🚀 Projet 2</h3>
+          <p>Plateforme e-commerce avec design system et checkout rapide.</p>
+        </article>
+        <article class="card">
+          <h3>📊 Projet 3</h3>
+          <p>SaaS Analytics — refonte UI et amélioration du tableau de bord.</p>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Process -->
-    <section id="process" class="section alt">
-      <div class="container">
-        <h2>Mon processus</h2>
-        <ol>
-          <li>Recherche & Analyse</li>
-          <li>Wireframes & Prototypes</li>
-          <li>Design UI</li>
-          <li>Tests & Itérations</li>
-        </ol>
-      </div>
-    </section>
+  <!-- A propos -->
+  <section id="a-propos" class="section alt">
+    <div class="container">
+      <h2>À propos</h2>
+      <p>Je suis Mister Banana, designer passionné par l’expérience utilisateur.  
+      Portfoli Yu est une vitrine vivante : je crois que le design doit être dynamique, engageant et fun ! 🎉</p>
+    </div>
+  </section>
 
-    <!-- A propos -->
-    <section id="a-propos" class="section">
-      <div class="container">
-        <h2>À propos</h2>
-        <p>Je suis Mister Banana, designer basé à Bruxelles. Passionné par l’expérience utilisateur, j’aide les entreprises à transformer leurs idées en produits aimés.</p>
-      </div>
-    </section>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <form>
+        <label>Nom
+          <input type="text" name="name" required />
+        </label>
+        <label>Email
+          <input type="email" name="email" required />
+        </label>
+        <label>Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section alt">
-      <div class="container">
-        <h2>Contact</h2>
-        <form>
-          <label>Nom
-            <input type="text" name="name" required />
-          </label>
-          <label>Email
-            <input type="email" name="email" required />
-          </label>
-          <label>Message
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <button type="submit" class="btn">Envoyer</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <small>© <span id="year"></span> Mister Banana. Tous droits réservés.</small>
+      <small>© <span id="year"></span> Portfoli Yu. Créé avec ❤️ par Mister Banana.</small>
     </div>
   </footer>
 
-  <!-- Lien JS -->
-  <script src="./script.js" defer></script>
+  <script src="/script.js" defer></script>
 </body>
 </html>

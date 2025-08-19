@@ -4,21 +4,17 @@ const menu = document.getElementById('menu');
 
 if (menuBtn && menu) {
   menuBtn.addEventListener('click', () => {
-    const visible = menu.style.display === 'flex';
-    menu.style.display = visible ? 'none' : 'flex';
-    menuBtn.setAttribute('aria-expanded', !visible);
+    menu.classList.toggle('active');
+    menuBtn.setAttribute('aria-expanded', menu.classList.contains('active'));
   });
 }
 
-// ===== Année auto dans le footer =====
+// ===== Année auto =====
 const yearSpan = document.getElementById('year');
-if (yearSpan) {
-  yearSpan.textContent = new Date().getFullYear();
-}
+if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-// ===== Petit effet sur scroll =====
+// ===== Scroll animation =====
 const cards = document.querySelectorAll('.card');
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -27,5 +23,22 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.2 });
-
 cards.forEach(card => observer.observe(card));
+
+// ===== Toggle Dark/Light =====
+const toggleBtn = document.getElementById('themeToggle');
+if (toggleBtn) {
+  toggleBtn.addEventListener('click', () => {
+    const theme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+    toggleBtn.textContent = theme === 'light' ? '🌙' : '☀️';
+    localStorage.setItem('theme', theme);
+  });
+}
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  if (toggleBtn) toggleBtn.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+}
