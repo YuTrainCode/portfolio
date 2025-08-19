@@ -1,93 +1,33 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfoli Yu — UX/UI & Brand Designer</title>
-  <link rel="stylesheet" href="/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfoli Yu</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    document.documentElement.classList.remove('no-js');
+  </script>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container">
-      <div class="logo">● Portfoli Yu</div>
-      <nav>
-        <button id="menuBtn" class="menu-btn">☰</button>
-        <ul id="menu" class="menu">
-          <li><a href="#hero">Accueil</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="intro-animation"></div>
 
-  <!-- HERO -->
-  <section id="hero" class="hero container">
-    <div class="hero-text">
-      <h1>Hey, je suis <span class="highlight">Yu</span>,<br>
-      un <span class="accent">UX/UI & Brand Designer</span></h1>
-      <p>Transformer les idées en visuels percutants — UI/UX et branding qui captivent, engagent et livrent des résultats.</p>
-      <a href="#contact" class="btn">Contactez-moi</a>
-    </div>
-    <div class="hero-img">
-      <img src="https://via.placeholder.com/400x500" alt="Portrait Yu">
-    </div>
-    <div class="hero-stats">
-      <p><strong>15+</strong><br>Années d’expérience</p>
-      <p><strong>280+</strong><br>Projets livrés</p>
-      <p><strong>99%</strong><br>Satisfaction</p>
-      <p><strong>50</strong><br>Clients</p>
-    </div>
-  </section>
+  <main class="centered-content">
+    <h1 class="headline">
+      Portfoli <span class="accent">Yu</span><br>
+      Designer audacieux & créatif
+    </h1>
+    <p class="pitch">J’aide les marques à passer du « cool » au « parfaitement absurde ». Tu veux voir comment ?</p>
+    <button id="yesBtn" class="btn">Oui, montre-moi ça.</button>
+  </main>
 
-  <!-- SERVICES -->
-  <section id="services" class="section container">
-    <div class="services-grid">
-      <div class="service"><h3>User-Centered Design</h3><p>Des expériences sur mesure pour vos utilisateurs.</p></div>
-      <div class="service"><h3>Brand Identity & Strategy</h3><p>Construire une image de marque forte.</p></div>
-      <div class="service"><h3>Responsive & Modern UI</h3><p>Des designs fluides, optimisés pour tous supports.</p></div>
-      <div class="service"><h3>Seamless Prototyping</h3><p>Prototypage rapide et efficace pour valider vos idées.</p></div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section container">
-    <h2>Crafting Meaningful Brands & Intuitive Experiences</h2>
-    <p>Je suis Yu, designer passionné par la création d’expériences digitales engageantes.  
-    J’allie stratégie, créativité et fonctionnalité pour donner vie à des idées et créer des produits extraordinaires.</p>
-  </section>
-
-  <!-- PORTFOLIO -->
-  <section id="portfolio" class="section container">
-    <h2>Portfolio</h2>
-    <div class="portfolio-item">
-      <img src="https://via.placeholder.com/800x500" alt="Projet 1">
-      <div class="caption">
-        <h3>Soundwave</h3>
-        <p>Design d’une expérience audio immersive (2025).</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section container">
-    <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Nom" required>
-      <input type="email" placeholder="Email" required>
-      <textarea rows="4" placeholder="Message"></textarea>
-      <button class="btn">Envoyer</button>
-    </form>
-  </section>
-
-  <!-- FOOTER -->
   <footer class="site-footer">
-    <p>© <span id="year"></span> Portfoli Yu. Tous droits réservés.</p>
+    <p class="subtext">
+      Pour quand ton branding a besoin de <strong>love</strong>.<br>
+      Basé à Bruxelles — <a href="mailto:hello@portfoliyu.be">hello@portfoliyu.be</a>
+    </p>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
