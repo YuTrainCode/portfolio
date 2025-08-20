@@ -12,6 +12,17 @@ body {
   scroll-behavior: smooth; /* ⚡ smooth scroll natif */
 }
 
+.bg-video {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.4); /* assombrit légèrement pour plus de lisibilité */
+}
+
+
 /* Intro anim */
 .intro-animation {
   background: url('https://via.placeholder.com/800x800?text=Portfoli+Yu') center/cover no-repeat;
