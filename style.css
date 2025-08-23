@@ -1,7 +1,9 @@
 :root {
+  --bg: #000;
   --fg: #fff;
   --accent: #0070f3;
 }
+
 
 body {
   margin: 0;

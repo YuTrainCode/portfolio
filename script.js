@@ -18,3 +18,17 @@ if (yesBtn) {
     }, 2000);
   });
 }
+
+// Affiche les sections au scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      entry.target.classList.remove('hidden');
+    }
+  });
+});
+
+document.querySelectorAll('.about-section, .cats-section').forEach(el => {
+  observer.observe(el);
+});
