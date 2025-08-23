@@ -12,51 +12,17 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Fond vidéo via CSS */
-.video-background {
+#bg-video {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.video-background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  background: black;
-}
-
-.video-background::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("hero_background.mp4") center center / cover no-repeat;
-  /* 👆 Ceci NE FONCTIONNE PAS avec une vidéo directement */
-  /* Mais on peut faire un hack avec <video> masqué et fixé en CSS si besoin */
-}
-
-/* Si tu veux la vraie vidéo jouée en fond en CSS, utilise un <video> en CSS */
-
-.video-background video {
-  position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
   min-height: 100%;
-  object-fit: cover;
+  width: auto;
+  height: auto;
   z-index: -1;
+  object-fit: cover;
+  pointer-events: none;
 }
 
 /* Texte visible par-dessus */
