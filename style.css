@@ -7,20 +7,25 @@
 
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--fg);
+  background: #000;
+  color: #fff;
   font-family: -apple-system, system-ui, sans-serif;
-  scroll-behavior: smooth; /* ⚡ smooth scroll natif */
+  scroll-behavior: smooth;
 }
 
+
 .bg-video {
-  top: 0; left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(0.4); /* assombrit légèrement pour plus de lisibilité */
+  pointer-events: none; /* pour que la vidéo ne bloque rien */
+  filter: brightness(0.4);
 }
+
 
 
 /* Intro anim */
