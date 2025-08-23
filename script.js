@@ -2,7 +2,7 @@ const yesBtn = document.getElementById('yesBtn');
 const aboutSection = document.getElementById('about');
 const catsSection = document.getElementById('cats');
 
-if (yesBtn) {
+/*if (yesBtn) {
   yesBtn.addEventListener('click', () => {
     // scroll fluide (plus lent avec scrollIntoView nativement)
     aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -17,7 +17,7 @@ if (yesBtn) {
       catsSection.classList.add('show');
     }, 2000);
   });
-}
+}*/
 
 // Affiche les sections au scroll
 const observer = new IntersectionObserver((entries) => {
