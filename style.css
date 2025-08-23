@@ -1,5 +1,5 @@
 :root {
-  --fg: #111;
+  --fg: #fff;
   --accent: #0070f3;
 }
 
@@ -23,13 +23,13 @@ body {
 
 
 /* Intro anim */
-/*.intro-animation {
+.intro-animation {
   background: url('https://via.placeholder.com/800x800?text=Portfoli+Yu') center/cover no-repeat;
   filter: grayscale(80%);
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   animation: fadeOut 10s ease-in-out forwards;
-}*/
+}
 
 @keyframes fadeOut {
   0% { opacity: 1; }
@@ -51,7 +51,7 @@ body {
 }
 
 .headline {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: 4rem; 
   margin-bottom: 1rem;
 }
 .accent {
@@ -64,29 +64,90 @@ body {
   opacity: 0.8;
 }
 
-.btn {
-  padding: 0.8rem 1.5rem;
-  border: none;
-  background: var(--accent);
+/* From Uiverse.io by mrhyddenn */ 
+button {
+  position: relative;
+  padding: 1em 3em;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
   color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 0.3rem;
-  transition: transform 0.2s ease;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
-.btn:hover {
-  transform: scale(1.05);
+
+button:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
+
+button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+button::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
 
 /* Section Qui suis-je */
 .about-section {
   min-height: 100vh;
   padding: 5rem 2rem;
-  background: #fff;
   text-align: center;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease, transform 1s ease;
+
 }
 .about-section h2 {
   font-size: 2.5rem;
@@ -110,7 +171,6 @@ body {
   position: relative;
   padding: 2rem;
   text-align: center;
-  background: var(--bg);
 }
 .site-footer .subtext {
   font-size: 0.85rem;
@@ -126,7 +186,6 @@ body {
 .about-section, .cats-section {
   min-height: 70vh;
   padding: 5rem 2rem;
-  background: #fff;
   text-align: center;
   opacity: 0;
   transform: translateY(50px);
