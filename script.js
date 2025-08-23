@@ -1,34 +1,27 @@
-const yesBtn = document.getElementById('yesBtn');
-const aboutSection = document.getElementById('about');
-const catsSection = document.getElementById('cats');
+// ⏳ Quand le DOM est prêt
+document.addEventListener("DOMContentLoaded", () => {
 
-/*if (yesBtn) {
-  yesBtn.addEventListener('click', () => {
-    // scroll fluide (plus lent avec scrollIntoView nativement)
-    aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    // Apparition de "Qui suis-je"
-    setTimeout(() => {
-      aboutSection.classList.add('show');
-    }, 800);
-
-    // Apparition des chats après la section
-    setTimeout(() => {
-      catsSection.classList.add('show');
-    }, 2000);
+  // 💡 Affiche les sections quand elles deviennent visibles
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        entry.target.classList.remove('hidden');
+      }
+    });
   });
-}*/
 
-// Affiche les sections au scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-      entry.target.classList.remove('hidden');
-    }
+  // 🔍 Observe les sections à faire apparaître
+  document.querySelectorAll('.about-section, .cats-section').forEach(el => {
+    observer.observe(el);
   });
-});
 
-document.querySelectorAll('.about-section, .cats-section').forEach(el => {
-  observer.observe(el);
+  // 🧨 Supprime automatiquement l'animation d’intro après 10s
+  const intro = document.querySelector('.intro-animation');
+  if (intro) {
+    setTimeout(() => {
+      intro.style.display = 'none';
+    }, 10000); // 10 secondes
+  }
+
 });
