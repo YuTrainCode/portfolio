@@ -50,6 +50,7 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  gap: 0.9rem;
 }
 
 .line {
@@ -93,7 +94,8 @@ main {
   text-decoration: none;
   font-family: 'Space Mono', monospace;
   font-size: 0.9rem;
-  transition: background 0.3s;
+  transition: background 0.7s;
+  z-index: 1;
 }
 
 .button:hover {
