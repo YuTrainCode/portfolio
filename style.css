@@ -1,92 +1,65 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: #111;
-  color: white;
-  font-family: 'Space Mono', monospace;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
-
-
-.container {
-  border: 1px solid #888;
-  width: 90%;
-  height: 90vh;
-  margin: 5vh auto;
-  padding: 2rem;
-  position: relative;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.05));
-}
-
-
-.title-block {
-  max-width: 500px;
-}
-
-
-.line {
-  border-top: 1px solid white;
-  margin: 1rem 0;
-}
-
-
-.portfoli {
-  font-family: Impact, sans-serif;
-  font-size: 4rem;
-  color: white;
-  letter-spacing: 2px;
-}
-
-
-.yu {
-  font-family: Impact, sans-serif;
-  font-size: 4rem;
-  color: #FFD700;
-  display: inline-block;
-  margin-left: 0.5rem;
+border-top: 1px solid white;
+margin: 1rem 0;
 }
 
 
 .iuliana {
-  font-size: 0.9rem;
-  text-align: right;
-  margin-bottom: 0.5rem;
+font-size: 0.9rem;
+text-align: right;
+margin-bottom: 0.5rem;
+}
+
+
+.title-row {
+display: flex;
+align-items: center;
+gap: 1rem;
+}
+
+
+.portfoli {
+font-family: Impact, sans-serif;
+font-size: 4rem;
+color: white;
+letter-spacing: 2px;
+}
+
+
+.yu {
+font-family: Impact, sans-serif;
+font-size: 4rem;
+color: #FFD700;
 }
 
 
 .role {
-  font-size: 1rem;
+font-size: 1rem;
 }
 
 
 .button {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.6rem 1.2rem;
-  border: 1px solid #FFD700;
-  color: #FFD700;
-  text-decoration: none;
-  font-family: 'Space Mono', monospace;
-  font-size: 0.9rem;
-  transition: 0.3s;
+display: inline-block;
+margin-top: 2rem;
+padding: 0.6rem 1.2rem;
+border: 1px solid #FFD700;
+color: #FFD700;
+text-decoration: none;
+font-family: 'Space Mono', monospace;
+font-size: 0.9rem;
+transition: background 0.3s;
 }
 
 
 .button:hover {
-  background: #FFD700;
-  color: black;
+background: #FFD700;
+color: black;
 }
 
 
 .cat {
-  position: absolute;
-  bottom: 0;
-  right: 2rem;
-  width: 150px;
+position: absolute;
+bottom: 0;
+right: 2rem;
+width: 150px;
 }
