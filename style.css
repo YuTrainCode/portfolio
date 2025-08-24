@@ -10,7 +10,6 @@ body {
   font-family: 'Space Mono', monospace;
   height: 100vh;
   overflow: hidden;
-  position: relative;
 }
 
 main {
@@ -22,35 +21,41 @@ main {
 
 .container {
   border: 1px solid #888;
-  padding: 1rem;
-  position: relative;
+  padding: 1.5rem;
+  background: transparent;
   width: 90%;
   max-width: 1000px;
-  background: transparent;
+  position: relative;
 }
 
-.title-block {
-  max-width: 500px;
+.top-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.top-line {
+.top-line,
+.bottom-line {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid white;
-  margin: 1rem 0;
-  padding-top: 0.3rem;
 }
 
-.iuliana {
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: white;
+}
+
+.iuliana, .role {
   font-size: 0.9rem;
-  text-align: right;
+  margin-left: 1rem;
 }
 
 .title-row {
   display: flex;
-  align-items: center;
   gap: 1rem;
+  align-items: center;
 }
 
 .portfoli {
@@ -66,21 +71,9 @@ main {
   color: #FFD700;
 }
 
-.bottom-line {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid white;
-  margin: 1rem 0;
-  padding-top: 0.3rem;
-}
-
-.role {
-  font-size: 1rem;
-}
-
 .button {
   display: inline-block;
+  margin-top: 2rem;
   padding: 0.6rem 1.2rem;
   border: 1px solid #FFD700;
   color: #FFD700;
