@@ -16,7 +16,7 @@ main {
 
 .container {
   border: 1px solid #888;
-  padding: 2rem;
+  padding: 0.5rem;
   background: transparent;
   position: relative;
   width: 90%;
@@ -41,13 +41,13 @@ main {
 
 .portfoli {
   font-family: Impact, sans-serif;
-  font-size: 4rem;
+  font-size: 10rem;
   color: white;
 }
 
 .yu {
   font-family: Impact, sans-serif;
-  font-size: 4rem;
+  font-size: 10rem;
   color: #FFD700;
 }
 
