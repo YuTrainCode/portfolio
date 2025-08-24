@@ -9,7 +9,6 @@ body {
   background: linear-gradient(to right, #131212 80%, #797171 100%);
   color: white;
   font-family: 'Space Mono', monospace;
-  min-height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
   padding: 2rem;
@@ -20,16 +19,17 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .border {
   border: 1px solid #888;
-  padding: 4vw;
+  padding: 2em;
   width: 100%;
   max-width: 1200px;
   margin: auto;
   position: relative;
+
 }
 
 .container {
