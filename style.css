@@ -1,55 +1,36 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Space Mono', monospace;
   background: linear-gradient(to right, #131212 80%, #797171 100%);
   color: white;
-  font-family: 'Space Mono', monospace;
-  height: 100vh;
   overflow: hidden;
 }
 
 main {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
+  height: 100%;
 }
 
 .container {
   border: 1px solid #888;
-  padding: 20px;
+  padding: 2rem;
   background: transparent;
+  position: relative;
   width: 90%;
   max-width: 1000px;
-  position: relative;
 }
 
-.top-block {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+.title-block {
+  max-width: 500px;
 }
 
-.top-line,
-.bottom-line {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.line {
-  flex-grow: 1;
-  height: 1px;
-  background-color: white;
-}
-
-.iuliana, .role {
+.iuliana {
   font-size: 0.9rem;
-  margin-left: 1rem;
+  text-align: right;
+  margin-bottom: 0.5rem;
 }
 
 .title-row {
@@ -62,13 +43,21 @@ main {
   font-family: Impact, sans-serif;
   font-size: 4rem;
   color: white;
-  letter-spacing: 2px;
 }
 
 .yu {
   font-family: Impact, sans-serif;
   font-size: 4rem;
   color: #FFD700;
+}
+
+.line {
+  border-top: 1px solid white;
+  margin: 1rem 0;
+}
+
+.role {
+  font-size: 1rem;
 }
 
 .button {
@@ -93,4 +82,18 @@ main {
   bottom: 0;
   right: 2rem;
   width: 150px;
+}
+@media (max-width: 600px) {
+  .cat {
+    width: 100px;
+    right: 1rem;
+  }
+  
+  .portfoli, .yu {
+    font-size: 2.5rem;
+  }
+  
+  .title-block {
+    max-width: 100%;
+  }
 }
