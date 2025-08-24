@@ -23,7 +23,6 @@ main {
 
 .container {
   border: 1px solid #888;
-  padding: 4rem;
   background: transparent;
   width: 90%;
   max-width: 1000px;
