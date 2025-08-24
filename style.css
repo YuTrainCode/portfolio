@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
   font-family: 'Space Mono', monospace;
   min-height: 100vh;
   overflow-x: hidden;
+  padding: 2rem;
 }
 
 main {
@@ -21,25 +23,25 @@ main {
 
 .border {
   border: 1px solid #888;
-  padding : 16em;
-  padding-left: 1em;
-  padding-right: 20em;
-  margin: 2em;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: left;
-  margin-left: 1em;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .top-block {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
 }
 
 .top-line,
@@ -47,6 +49,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .line {
@@ -71,14 +74,14 @@ main {
 
 .portfoli {
   font-family: Impact, sans-serif;
-  font-size: 6rem;
+  font-size: clamp(3rem, 10vw, 6rem);
   color: white;
   letter-spacing: 2px;
 }
 
 .yu {
   font-family: Impact, sans-serif;
-  font-size: 6rem;
+  font-size: clamp(3rem, 10vw, 6rem);
   color: #FFD700;
 }
 
@@ -91,7 +94,6 @@ main {
   font-family: 'Space Mono', monospace;
   font-size: 0.9rem;
   transition: background 0.3s;
-  align-self: flex-start;
 }
 
 .button:hover {
@@ -104,4 +106,26 @@ main {
   bottom: 0.5rem;
   right: 2rem;
   width: 150px;
+}
+
+@media (max-width: 768px) {
+  .top-line, .bottom-line {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .iuliana, .role {
+    margin-left: 0;
+  }
+
+  .title-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cat {
+    width: 100px;
+    right: 1rem;
+  }
 }
