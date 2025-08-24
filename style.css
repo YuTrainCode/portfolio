@@ -1,42 +1,30 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Space Mono', monospace;
   background: linear-gradient(to right, #131212 80%, #797171 100%);
   color: white;
-  font-family: 'Space Mono', monospace;
-  height: 100vh;
   overflow: hidden;
-  position: relative;
 }
 
 main {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
+  height: 100%;
 }
 
 .container {
   border: 1px solid #888;
   padding: 2rem;
+  background: transparent;
   position: relative;
   width: 90%;
   max-width: 1000px;
-  height: auto;
-  background: transparent;
 }
 
 .title-block {
   max-width: 500px;
-}
-
-.line {
-  border-top: 1px solid white;
-  margin: 1rem 0;
 }
 
 .iuliana {
@@ -47,21 +35,25 @@ main {
 
 .title-row {
   display: flex;
-  align-items: center;
   gap: 1rem;
+  align-items: center;
 }
 
 .portfoli {
   font-family: Impact, sans-serif;
   font-size: 4rem;
   color: white;
-  letter-spacing: 2px;
 }
 
 .yu {
   font-family: Impact, sans-serif;
   font-size: 4rem;
   color: #FFD700;
+}
+
+.line {
+  border-top: 1px solid white;
+  margin: 1rem 0;
 }
 
 .role {
