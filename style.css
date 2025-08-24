@@ -22,7 +22,6 @@ main {
 
 .container {
   border: 1px solid #888;
-  padding: 1rem;
   position: relative;
   width: 90%;
   max-width: 1000px;
