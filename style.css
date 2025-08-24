@@ -1,94 +1,92 @@
-:root {
-  --bg: #000;
-  --fg: #fff;
-  --accent: #0070f3;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--fg);
-  font-family: system-ui, sans-serif;
-  scroll-behavior: smooth;
-}
-
-/* Texte visible par-dessus */
-.content {
-  position: relative;
-  z-index: 1;
-  color: white;
-  font-family: sans-serif;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-
-.centered-content {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-  z-index: 1;
-  position: relative;
-}
-
-.headline {
-  font-size: clamp(2rem, 5vw, 4rem);
-  margin-bottom: 1rem;
-}
-
-.accent {
-  color: var(--accent);
-}
-
-.pitch {
-  max-width: 500px;
-  margin-bottom: 2rem;
-  opacity: 0.8;
-}
-
-.btn {
-  padding: 0.8rem 1.5rem;
-  border: none;
-  background: var(--accent);
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 0.3rem;
-  transition: transform 0.2s ease;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-}
-
-.about-section {
-  min-height: 100vh;
-  padding: 5rem 2rem;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
   background: #111;
   color: white;
+  font-family: 'Space Mono', monospace;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
-.about-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 
-.site-footer {
-  text-align: center;
+.container {
+  border: 1px solid #888;
+  width: 90%;
+  height: 90vh;
+  margin: 5vh auto;
   padding: 2rem;
-  background: #000;
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.05));
 }
-.site-footer a {
-  color: var(--accent);
+
+
+.title-block {
+  max-width: 500px;
+}
+
+
+.line {
+  border-top: 1px solid white;
+  margin: 1rem 0;
+}
+
+
+.portfoli {
+  font-family: Impact, sans-serif;
+  font-size: 4rem;
+  color: white;
+  letter-spacing: 2px;
+}
+
+
+.yu {
+  font-family: Impact, sans-serif;
+  font-size: 4rem;
+  color: #FFD700;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+
+.iuliana {
+  font-size: 0.9rem;
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
+
+
+.role {
+  font-size: 1rem;
+}
+
+
+.button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #FFD700;
+  color: #FFD700;
+  text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+
+.button:hover {
+  background: #FFD700;
+  color: black;
+}
+
+
+.cat {
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+  width: 150px;
 }
