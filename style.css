@@ -74,14 +74,14 @@ main {
 
 .portfoli {
   font-family: Impact, sans-serif;
-  font-size: clamp(3rem, 10vw, 6rem);
+  font-size: clamp(3rem, 10vw, 10rem);
   color: white;
   letter-spacing: 2px;
 }
 
 .yu {
   font-family: Impact, sans-serif;
-  font-size: clamp(3rem, 10vw, 6rem);
+  font-size: clamp(5rem, 10vw, 10rem);
   color: #FFD700;
 }
 
@@ -105,7 +105,7 @@ main {
   position: absolute;
   bottom: 0.5rem;
   right: 2rem;
-  width: 150px;
+  width: 1000px;
 }
 
 @media (max-width: 768px) {
