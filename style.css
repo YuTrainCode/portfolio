@@ -85,10 +85,5 @@ main {
   width: 150px;
 }
 
-@media (max-width: 600px) {
-  .cat {
-    width: 100px;
-    right: 1rem;
-  }
+
   
-}
