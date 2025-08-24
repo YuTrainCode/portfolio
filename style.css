@@ -1,69 +1,86 @@
-body {
-  height: 100vh;
+/* === RESET === */
+* {
   margin: 0;
-  font-family: 'Space Mono', monospace;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   background: linear-gradient(to right, #131212 80%, #797171 100%);
   color: white;
-  overflow: hidden;
+  font-family: 'Space Mono', monospace;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 main {
-  padding: 10px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100%;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
 }
 
 .container {
-  border: 2px solid #888;
-  margin: 5rem;
+  border: 1px solid #888;
+  padding: 4rem;
   background: transparent;
-  position: relative;
   width: 90%;
   max-width: 1000px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-.title-block {
-  max-width: 500px;
+.top-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.iuliana {
+.top-line,
+.bottom-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: white;
+}
+
+.iuliana,
+.role {
   font-size: 0.9rem;
-  text-align: right;
-  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  white-space: nowrap;
 }
 
 .title-row {
   display: flex;
   gap: 1rem;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .portfoli {
   font-family: Impact, sans-serif;
-  font-size: 10rem;
+  font-size: 6rem;
   color: white;
+  letter-spacing: 2px;
 }
 
 .yu {
   font-family: Impact, sans-serif;
-  font-size: 10rem;
+  font-size: 6rem;
   color: #FFD700;
-}
-
-.line {
-  border-top: 1px solid white;
-  margin: 1rem 0;
-}
-
-.role {
-  font-size: 1rem;
 }
 
 .button {
   display: inline-block;
-  margin-top: 2rem;
   padding: 0.6rem 1.2rem;
   border: 1px solid #FFD700;
   color: #FFD700;
@@ -71,6 +88,7 @@ main {
   font-family: 'Space Mono', monospace;
   font-size: 0.9rem;
   transition: background 0.3s;
+  align-self: flex-start;
 }
 
 .button:hover {
@@ -80,10 +98,7 @@ main {
 
 .cat {
   position: absolute;
-  bottom: 0;
+  bottom: 0.5rem;
   right: 2rem;
   width: 150px;
 }
-
-
-  
