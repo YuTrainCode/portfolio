@@ -17,18 +17,23 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 2rem;
+  min-height: 100vh;;
+}
+
+.border {
+  border: 1px solid #888;
+  padding-top: 12em;
+  padding-bottom: 12em;
+  padding-left: 20em;
+  padding-right: 20em;
 }
 
 .container {
-  border: 1px solid #888;
   background: transparent;
   width: 90%;
   max-width: 1000px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
   gap: 3rem;
 }
 
