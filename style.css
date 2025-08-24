@@ -12,24 +12,23 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   padding: 2rem;
+  line-height: 1.6;
 }
 
 main {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-height: fit-content;
+  min-height: 100vh;
 }
 
 .border {
   border: 1px solid #888;
-  padding: 2rem;
+  padding: 4vw;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   position: relative;
-  padding-top: 25vh;
-  padding-bottom: 25vh;
 }
 
 .container {
@@ -37,6 +36,7 @@ main {
   flex-direction: column;
   align-items: flex-start;
   gap: 2rem;
+  width: 100%;
 }
 
 .top-block {
@@ -46,6 +46,7 @@ main {
   width: 100%;
 }
 
+/* Ligne + iuliana / role */
 .top-line,
 .bottom-line {
   display: flex;
@@ -64,7 +65,6 @@ main {
 .iuliana,
 .role {
   font-size: 0.9rem;
-  margin-left: 1rem;
   white-space: nowrap;
 }
 
@@ -77,14 +77,14 @@ main {
 
 .portfoli {
   font-family: Impact, sans-serif;
-  font-size: clamp(3rem, 10vw, 10rem);
+  font-size: clamp(3rem, 9vw, 10rem);
   color: white;
   letter-spacing: 2px;
 }
 
 .yu {
   font-family: Impact, sans-serif;
-  font-size: clamp(5rem, 10vw, 10rem);
+  font-size: clamp(3rem, 9vw, 10rem);
   color: #FFD700;
 }
 
@@ -96,8 +96,8 @@ main {
   text-decoration: none;
   font-family: 'Space Mono', monospace;
   font-size: 0.9rem;
-  transition: background 0.7s;
-  z-index: 1;
+  transition: background 0.3s;
+  align-self: flex-start;
 }
 
 .button:hover {
@@ -109,17 +109,20 @@ main {
   position: absolute;
   bottom: 0.5rem;
   right: 2rem;
-  width: 1000px;
+  width: 120px;
 }
 
+/* === Responsive (max 768px) === */
 @media (max-width: 768px) {
-  .top-line, .bottom-line {
+  .top-line,
+  .bottom-line {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 
-  .iuliana, .role {
+  .iuliana,
+  .role {
     margin-left: 0;
   }
 
@@ -128,8 +131,18 @@ main {
     align-items: flex-start;
   }
 
+  .container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
   .cat {
-    width: 100px;
+    width: 80px;
     right: 1rem;
+  }
+
+  .button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
   }
 }
