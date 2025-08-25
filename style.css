@@ -108,3 +108,43 @@ body {
   font-size: 0.8rem;
   opacity: 0.6;
 }
+
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #1a1a1a;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 1000;
+}
+.navbar a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar a:hover {
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .btn {
+    padding: 0.6rem 1.2rem;
+  }
+}
