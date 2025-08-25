@@ -37,7 +37,7 @@ body {
   width: 100%;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 5vw;
 }
 
@@ -55,6 +55,8 @@ body {
   max-width: 600px;
   text-align: left;
   z-index: 1;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .section h2 {
