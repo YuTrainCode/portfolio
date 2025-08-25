@@ -4,170 +4,107 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-html, body {
-  height: 100%;
+html {
+  scroll-behavior: smooth;
 }
-
 body {
-  background: #131212;
-  color: white;
+  background-color: #1a1a1a;
+  color: #fff;
   font-family: 'Space Mono', monospace;
-  margin: 5vh;
-  padding: 2rem;
   line-height: 1.6;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
-/* STRUCTURE */
-main {
-  width: 100%;
+/* === SECTIONS GÉNÉRALES === */
+.hero,
+.section {
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-}
-
-.border {
-  width: 100%;
-  max-width: 1100px;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-/* TITRE + LIGNES */
-.top-block {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 100%;
-}
-
-.top-line,
-.bottom-line {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  gap: 0.9rem;
+  text-align: center;
+  padding: 2rem;
 }
 
-.line {
-  flex-grow: 1;
-  height: 1px;
-  background-color: white;
+.hero {
+  background-color: #1a1a1a;
 }
 
-.iuliana,
-.role {
-  font-size: 0.9rem;
-  margin-left: 1rem;
-  white-space: nowrap;
-}
-
-.title-row {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.portfoli,
-.yu {
-  font-family: Impact, sans-serif;
-  font-size: clamp(3rem, 10vw, 10rem);
-  letter-spacing: 2px;
-}
-
-.yu {
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
   color: #FFD700;
 }
 
-.button {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  border: 1px solid #FFD700;
-  color: #FFD700;
-  text-decoration: none;
-  font-family: 'Space Mono', monospace;
-  font-size: 0.9rem;
-  transition: background 0.7s;
-  z-index: 1;
+/* === HERO SECTION === */
+.hero h1 {
+  font-size: 3rem;
+  color: #fff;
 }
-
-.button:hover {
+.accent {
+  color: #FFD700;
+}
+.slogan {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+.btn {
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
   background: #FFD700;
-  color: black;
+  color: #1a1a1a;
+  text-decoration: none;
+  border: none;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #fff;
+  color: #000;
 }
 
-/* ABOUT SECTION */
-.about-section {
-  padding: 5rem 0 0;
-  background: transparent;
-  color: white;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
+/* === À PROPOS + PROJETS === */
+.section p {
+  max-width: 700px;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
-.about-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.about-container {
-  max-width: 900px;
-  margin: 0 auto;
+/* === FORMULAIRE DE CONTACT === */
+.contact-form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-.about-top-line {
-  display: flex;
-  align-items: center;
   gap: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background: #333;
+  color: #fff;
+}
+.contact-form button {
+  padding: 0.8rem;
+  background: #FFD700;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background: #fff;
+  color: #000;
 }
 
-.about-title {
-  font-size: 2.5rem;
-  color: #FFD700;
-}
-
-.about-text {
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
-
-/* CHAT */
-.cat {
-  margin-top: 4rem;
-  width: 100px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .top-line, .bottom-line {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .iuliana, .role {
-    margin-left: 0;
-  }
-
-  .title-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .cat {
-    width: 80px;
-  }
+/* === FOOTER === */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.6;
 }
