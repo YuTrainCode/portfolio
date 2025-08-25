@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-  background: linear-gradient(to right, #131212 80%, #797171 100%);
+  background: #131212;
   color: white;
   font-family: 'Space Mono', monospace;
   margin: 5vh;
