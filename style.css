@@ -1,15 +1,15 @@
-/* === RESET === */
+/* === RESET STYLES === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* === GLOBAL SETTINGS === */
 html {
   scroll-behavior: smooth;
 }
 
-/* === GLOBAL === */
 body {
   margin: 0;
   font-family: 'Space Mono', monospace;
@@ -19,7 +19,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* === SECTIONS GÉNÉRALES === */
+/* === GENERAL SECTION STYLES === */
 .hero,
 .section {
   height: 100vh;
@@ -31,13 +31,13 @@ body {
   padding: 2rem;
 }
 
+/* === HERO SECTION === */
 .hero {
   position: relative;
-  height: 100vh;
   width: 100%;
   overflow: hidden;
-  display: flex;
-  align-items: flex-start;
+  align-items: flex-start;      /* Aligns content to the left */
+  justify-content: center;     /* Center vertically */
   padding: 0 5vw;
 }
 
@@ -48,24 +48,16 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(0.4);
+  filter: brightness(0.4);     /* Darkens video for better contrast */
 }
 
 .hero-content {
   max-width: 600px;
-  text-align: left;
   z-index: 1;
-  align-items: flex-start;
   text-align: left;
 }
 
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #FFD700;
-}
-
-/* === HERO SECTION === */
+/* Hero text styles */
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -74,46 +66,38 @@ body {
 .accent {
   color: #FFD700;
 }
+
 .slogan {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   opacity: 0.9;
 }
+
+/* Hero button */
 .btn {
   padding: 0.8rem 1.5rem;
   background: #FFD700;
   color: #1a1a1a;
-  text-decoration: none;
   font-weight: bold;
   border: none;
+  text-decoration: none;
   transition: 0.3s ease;
+  cursor: pointer;
 }
+
 .btn:hover {
   background: white;
   color: black;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  .slogan {
-    font-size: 1rem;
-  }
-  .btn {
-    padding: 0.6rem 1.2rem;
-  }
-}
-
-/* === À PROPOS + PROJETS === */
+/* === ABOUT / PROJECTS / OTHER SECTIONS === */
 .section p {
   max-width: 700px;
   font-size: 1.1rem;
   opacity: 0.9;
 }
 
-/* === FORMULAIRE DE CONTACT === */
+/* === CONTACT FORM === */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -126,17 +110,17 @@ body {
 .contact-form input,
 .contact-form textarea {
   padding: 0.8rem;
-  border: none;
-  border-radius: 4px;
   background: #333;
   color: #fff;
+  border: none;
+  border-radius: 4px;
 }
 
 .contact-form button {
   padding: 0.8rem;
   background: #FFD700;
-  border: none;
   font-weight: bold;
+  border: none;
   cursor: pointer;
 }
 
@@ -153,6 +137,7 @@ body {
   opacity: 0.6;
 }
 
+/* === SCROLL ANIMATIONS === */
 .section {
   opacity: 0;
   transform: translateY(40px);
@@ -164,6 +149,7 @@ body {
   transform: translateY(0);
 }
 
+/* === NAVIGATION === */
 .navbar {
   position: fixed;
   top: 0;
@@ -187,12 +173,23 @@ body {
   color: white;
 }
 
-@media (max-width: 600px) {
+/* === RESPONSIVE STYLES === */
+@media (max-width: 768px) {
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+
+  .slogan {
+    font-size: 1rem;
   }
 
   .btn {
     padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
   }
 }
