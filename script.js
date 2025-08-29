@@ -1,4 +1,4 @@
-// === Intersection observer ===
+// === Intersection Observer (fade-in sections) ===
 document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -9,12 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.section').forEach(section => observer.observe(section));
 });
 
-// === Ghost Mouse Effect ===
+// === Ghost Mouse Effect (WebGL) ===
 const scene = new THREE.Scene();
 const camera = new THREE.Camera();
 camera.position.z = 1;
 
-const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('bg-canvas'), alpha: true });
+const renderer = new THREE.WebGLRenderer({
+  canvas: document.getElementById('bg-canvas'),
+  alpha: true
+});
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 
@@ -30,12 +33,21 @@ uniform vec2 u_mouse;
 uniform float u_time;
 
 void main() {
+    // Normalized fragment coordinates (0 to 1)
     vec2 st = gl_FragCoord.xy / u_resolution;
-    float d = distance(st, u_mouse / u_resolution);
 
-    // Animate glow intensity with time
-    float pulse = sin(u_time * 2.0) * 0.5 + 0.5; // Ranges from 0 to 1
-    float glow = 0.02 / d * (0.8 + 0.2 * pulse); // More dynamic and responsive
+    // Normalized and centered mouse position (0 to 1)
+    vec2 mouse = u_mouse / u_resolution;
+
+    // Correct the aspect ratio
+    st.x *= u_resolution.x / u_resolution.y;
+    mouse.x *= u_resolution.x / u_resolution.y;
+
+    float d = distance(st, mouse);
+
+    // Add pulsing
+    float pulse = sin(u_time * 2.0) * 0.5 + 0.5;
+    float glow = 0.02 / d * (0.8 + 0.2 * pulse);
 
     vec3 yellow = vec3(1.0, 0.84, 0.0);
     vec3 color = yellow * glow;
@@ -53,20 +65,22 @@ const geometry = new THREE.PlaneBufferGeometry(2, 2);
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
-function onMouseMove(e) {
+// === Mouse interaction ===
+window.addEventListener("mousemove", (e) => {
   uniforms.u_mouse.value.x = e.clientX;
   uniforms.u_mouse.value.y = window.innerHeight - e.clientY;
-}
-window.addEventListener("mousemove", onMouseMove, false);
+});
 
+// === Responsive canvas ===
 function onWindowResize() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   uniforms.u_resolution.value.x = renderer.domElement.width;
   uniforms.u_resolution.value.y = renderer.domElement.height;
 }
-window.addEventListener("resize", onWindowResize, false);
+window.addEventListener("resize", onWindowResize);
 onWindowResize();
 
+// === Animation loop ===
 function animate() {
   requestAnimationFrame(animate);
   uniforms.u_time.value += 0.05;
