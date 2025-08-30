@@ -155,7 +155,6 @@ p {
 /* === À PROPOS : IMAGE GAUCHE / TEXTE DROITE === */
 .about-section {
   display: flex;
-  width: 90%;
   justify-content: center;
   align-items: center;
   padding: 4rem 2rem;
