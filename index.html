@@ -13,11 +13,15 @@
 <body>
   <!-- NAVIGATION -->
   <nav class="navbar">
-    <a href="#hero" class="nav-link">Accueil</a>
-    <a href="#about" class="nav-link">À propos</a>
-    <a href="#projects" class="nav-link">Projets</a>
-    <a href="#contact" class="nav-link">Contact</a>
-  </nav>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero" class="nav-link">Accueil</a></li>
+    <li><a href="#about" class="nav-link">À propos</a></li>
+    <li><a href="#projects" class="nav-link">Projets</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+</nav>
+
 
 
   <!-- HERO SECTION -->
@@ -37,7 +41,7 @@
       </div>
       <div class="about-text">
         <h2>À propos</h2>
-        <p>Je suis Iuliana, UX/UI Designer passionnée formée à l’EFP à Bruxelles. Mon expérience chez Skydoo m’a permis
+        <p>Je suis Iuliana, UX/UI Designer passionnée formée à l’EFP à Bruxelles. Mon expérience passée chez Skydoo m’a permis
           de concevoir des sites web de A à Z, d’échanger directement avec les clients et de collaborer efficacement
           avec les équipes commerciales et techniques. J’ai remporté deux prix lors d’un hackathon : l’un pour la
           meilleure accessibilité & inclusivité, et l’autre pour le meilleur marketing digital. Mes compétences allient
@@ -70,12 +74,16 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 Portfoli Yu – Made with 🍌 in Brussels</p>
+    <p>© 2025 Portfoli Yu </p>
   </footer>
 
   <!-- JS -->
   <button id="backToTop" title="Retour en haut">↑</button>
   <script src="script.js"></script>
+  <script>
+  document.body.classList.add('fade-in');
+</script>
+
 </body>
 
 </html>
