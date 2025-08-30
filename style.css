@@ -250,8 +250,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  width: 100%;
+  width: 90%;
   gap: 3rem;
   flex-wrap: wrap;
 }
@@ -260,7 +259,6 @@ p {
   flex: 1;
   min-width: 300px;
   display: flex;
-  justify-content: center;
 }
 
 .confirmation-image img {
@@ -288,6 +286,45 @@ p {
   opacity: 0.9;
   text-align: justify;
 }
+
+.btn {
+  padding: 0.8rem 2rem;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff40;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #FFD700;
+  color: #1a1a1a;
+  border-color: #FFD700;
+  box-shadow: 0 0 8px #ffd70060;
+}
+
+/* === CANVAS FIREWORKS BACKGROUND === */
+#fireworks-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+
+
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
