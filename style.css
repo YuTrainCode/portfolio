@@ -125,7 +125,7 @@ p {
     align-items: center;
     background: #1a1a1a;
     position: absolute;
-    top: 30px;
+    top: 50px;
     left: 0;
     right: 0;
     max-height: 0;
@@ -144,6 +144,9 @@ p {
   .nav-links a {
     width: 100%;
     text-align: center;
+  }
+  .navbar{
+    padding: 2em;
   }
 }
 
