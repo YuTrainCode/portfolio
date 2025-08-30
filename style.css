@@ -16,28 +16,21 @@ body {
   color: #fff;
   overflow-x: hidden;
 }
+
 p {
   font-family: 'Hind Madurai', sans-serif;
 }
 
-/* === Hero fade-in animations === */
+/* === HERO ANIMATIONS === */
 .hero .hero-content > * {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1s ease forwards;
 }
 
-.hero .hero-content h1 {
-  animation-delay: 0.3s;
-}
-
-.hero .slogan {
-  animation-delay: 0.6s;
-}
-
-.hero .btn {
-  animation-delay: 0.9s;
-}
+.hero .hero-content h1 { animation-delay: 0.3s; }
+.hero .slogan { animation-delay: 0.6s; }
+.hero .btn { animation-delay: 0.9s; }
 
 @keyframes fadeInUp {
   to {
@@ -46,8 +39,7 @@ p {
   }
 }
 
-
-
+/* === NAVIGATION BAR === */
 .navbar {
   position: fixed;
   top: 0;
@@ -61,23 +53,25 @@ p {
   z-index: 1000;
 }
 
+.nav-logo {
+  font-weight: bold;
+  color: #FFD700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
 
 .hamburger {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #FFD700;
   display: none;
   cursor: pointer;
 }
 
-/* Nav links */
 .nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
-
 
 .nav-links a {
   color: #FFD700;
@@ -104,40 +98,6 @@ p {
 .nav-links a.active::after {
   transform: scaleX(1);
 }
-
-/* Version mobile */
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #1a1a1a;
-    flex-direction: column;
-    align-items: center;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    z-index: 999;
-  }
-
-  .nav-links.open {
-    max-height: 300px;
-    padding: 1rem 0;
-  }
-
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-  }
-
-  .nav-links a {
-    display: block;
-    width: 100%;
-  }
-}
-
 
 /* === HERO SECTION === */
 .hero {
@@ -168,7 +128,7 @@ p {
   opacity: 0.9;
 }
 
-/* === BOUTON GLOBAL === */
+/* === BUTTONS === */
 .btn,
 .contact-form button {
   padding: 10px 20px;
@@ -194,7 +154,7 @@ p {
   box-shadow: 0 0 8px #ffd70060;
 }
 
-/* === SECTIONS GÉNÉRALES === */
+/* === SECTIONS === */
 .section {
   height: 100vh;
   display: flex;
@@ -227,7 +187,7 @@ p {
   opacity: 0.9;
 }
 
-/* === À PROPOS : IMAGE GAUCHE / TEXTE DROITE === */
+/* === ABOUT SECTION === */
 .about-section {
   display: flex;
   justify-content: center;
@@ -257,7 +217,7 @@ p {
   border-radius: 12px;
 }
 
-/* === FORMULAIRE DE CONTACT === */
+/* === CONTACT FORM === */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -276,7 +236,7 @@ p {
   border-radius: 4px;
 }
 
-/* === BOUTON BACK TO TOP === */
+/* === BACK TO TOP BUTTON === */
 #backToTop {
   position: fixed;
   bottom: 40px;
@@ -312,126 +272,42 @@ p {
   opacity: 0.6;
 }
 
-/* === CONFIRMATION PAGE === */
-.confirmation-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem 2rem;
-}
-
-.confirmation-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-
-.confirmation-image {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-}
-
-.confirmation-image img {
-  max-width: 70%;
-}
-
-.confirmation-text {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  text-align: left;
-  font-family: 'Hind Madurai', sans-serif;
-}
-
-.confirmation-text h2 {
-  font-size: 2.5rem;
-  color: #FFD700;
-  text-transform: uppercase;
-}
-
-.confirmation-text p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  text-align: justify;
-}
-
-.btn {
-  padding: 0.8rem 2rem;
-  background: transparent;
-  color: #ffffff;
-  border: 1px solid #ffffff40;
-  font-weight: 500;
-  font-size: 1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: 0.3s ease;
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-}
-
-.btn:hover,
-.btn:focus {
-  background: #FFD700;
-  color: #1a1a1a;
-  border-color: #FFD700;
-  box-shadow: 0 0 8px #ffd70060;
-}
-
-/* === CANVAS FIREWORKS BACKGROUND === */
-#fireworks-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-/* --- Fade-in on page load --- */
-body.fade-in {
-  opacity: 0;
-  animation: fadeInBody 1.2s ease forwards;
-}
-
-@keyframes fadeInBody {
-  to {
-    opacity: 1;
-  }
-}
-
-
-
-
-
-/* Responsive */
+/* === MOBILE NAVIGATION === */
 @media (max-width: 768px) {
-  .confirmation-content {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1a1a1a;
     flex-direction: column;
-    text-align: center;
-  }
-
-  .confirmation-text {
-    text-align: center;
     align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    z-index: 999;
   }
 
-  .confirmation-text p {
+  .nav-links.open {
+    max-height: 300px;
+    padding: 1rem 0;
+  }
+
+  .nav-links li {
+    padding: 1rem 0;
+    width: 100%;
     text-align: center;
   }
-}
 
+  .nav-links a {
+    display: block;
+    width: 100%;
+  }
 
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
   .hero h1 {
     font-size: 2.2rem;
   }
