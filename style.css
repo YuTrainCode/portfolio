@@ -105,13 +105,9 @@ p {
   transform: scaleX(1);
 }
 
-/* Mobile styles */
+/* Version mobile */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-   .nav-links {
+  .nav-links {
     position: absolute;
     top: 100%;
     left: 0;
@@ -141,8 +137,6 @@ p {
     width: 100%;
   }
 }
-
-
 
 
 /* === HERO SECTION === */
