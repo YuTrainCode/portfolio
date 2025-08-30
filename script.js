@@ -52,18 +52,13 @@ backToTopBtn.addEventListener('click', () => {
 });
 
 
-// Menu hamburger
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
+// Hamburger toggle menu
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
-
-// Ferme le menu après clic sur un lien (mobile)
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
   });
 });
 
