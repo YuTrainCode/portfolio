@@ -26,10 +26,13 @@ body {
   align-items: center;
   padding: 0 5vw;
   text-align: left;
+  background: url('assets/black_cats.png') center center / cover no-repeat;
+
+
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 600px; 
   z-index: 1;
 }
 
