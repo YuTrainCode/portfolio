@@ -12,8 +12,6 @@ html {
 
 body {
   font-family: 'Space Mono', monospace;
-  background: #1a1a1a;
-  color: #fff;
   overflow-x: hidden;
 }
 p {
@@ -53,7 +51,7 @@ p {
   top: 0;
   left: 0;
   right: 0;
-  background: #1a1a1a;
+  background: #080808;
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
@@ -156,21 +154,16 @@ p {
 
 /* === HERO SECTION === */
 .hero {
-  height: 100vh;
+  height: 100vh; /*hero section height*/
   display: flex;
   align-items: center;
-  padding: 0 5vw;
-  text-align: left;
-  background: url('assets/black_cats.png') center center / cover no-repeat;
-}
-
-.hero-content {
-  max-width: 600px;
-  z-index: 1;
+  padding: 0 4em; 
+  background: url('assets/black_cats.png') center center / cover no-repeat fixed;
 }
 
 .hero h1 {
   font-size: 5.5rem;
+  color: #fff;
 }
 
 .accent {
@@ -181,22 +174,29 @@ p {
   font-size: 17px;
   margin-bottom: 2rem;
   opacity: 0.9;
+  color: #fff;
 }
 
 /* === BOUTON GLOBAL === */
-.btn,
-.contact-form button {
+.btn {
   padding: 10px 20px;
   text-transform: uppercase;
   font-size: 17px;
-  font-weight: 500;
   color: #ffffff;
   background: transparent;
   border: 1px solid #ffffff40;
   cursor: pointer;
-  transition: 0.5s ease;
-  user-select: none;
-  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.contact-form button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 17px;
+  color: #000000;
+  background: transparent;
+  border: 1px solid #00000040;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 .btn:hover,
@@ -249,6 +249,8 @@ p {
   align-items: center;
   padding: 4rem 2rem;
   text-align: justify;
+  height: 100vh;
+
 }
 
 .about-content {
@@ -271,6 +273,34 @@ p {
   max-width: 70%;
   border-radius: 12px;
 }
+/* === Projects === */
+.section_projects {
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  gap: 2rem;
+}
+
+.section_projects h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section_projects p {
+  max-width: 600px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.projet {
+  border: 1px solid #00000040;
+  padding: 2em;
+  width: 400px;
+}
+
 
 /* === FORMULAIRE DE CONTACT === */
 .contact-form {
@@ -279,7 +309,7 @@ p {
   gap: 1rem;
   margin-top: 2rem;
   width: 100%;
-  max-width: 400px;
+  max-width: 1140px;
 }
 
 .contact-form input,
@@ -289,6 +319,7 @@ p {
   color: #fff;
   border: none;
   border-radius: 4px;
+  width: 100%;
 }
 
 /* === BOUTON BACK TO TOP === */
@@ -392,8 +423,23 @@ p {
   text-align: center;
 }
 
-.btn:hover,
-.btn:focus {
+.btn_project {
+  padding: 0.8rem 2rem;
+  background: transparent;
+  color: #000000;
+  border: 1px solid #00000040;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn_project:hover,
+.btn_project:focus {
   background: #FFD700;
   color: #1a1a1a;
   border-color: #FFD700;
